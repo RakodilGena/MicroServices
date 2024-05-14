@@ -1,0 +1,6 @@
+@MicroServices.Server.Gateway_HostAddress = http://localhost:5291
+
+GET {{MicroServices.Server.Gateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
