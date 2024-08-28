@@ -3,5 +3,5 @@
 namespace MicroServices.Server.Gateway.Controllers.Messages;
 
 [ApiController]
-[Route("Messages")]
+[Route("api/v1/Messages")]
 public sealed partial class MessagesController : ControllerBase;

@@ -11,16 +11,17 @@ public partial class MessagesController
     /// Returns messages history
     /// </summary>
     /// <returns></returns>
-    
+
     [HttpGet]
     [ProducesResponseType<IEnumerable<MessageDto>>(StatusCodes.Status200OK)]
     [ProducesResponseType<ErrorResult>(StatusCodes.Status500InternalServerError)]
     public async Task<ActionResult<IEnumerable<MessageDto>>> GetMessages(
-        [FromQuery]PaginationRequest paginationRequest)
+        [FromQuery] PaginationRequest paginationRequest)
     {
         await Task.Yield();
-        
-        MessageDto[] hardcodedData = [
+
+        MessageDto[] hardcodedData =
+        [
             new MessageDto("Vasiliy", DateTime.UtcNow, "Sure, I'm down!", []),
             new MessageDto("Lina", DateTime.UtcNow.AddMinutes(-1), "Hello guys, wanna throw a party tonight?", []),
             new MessageDto("Andrew", DateTime.UtcNow.AddMinutes(-2), "Hey, you!", []),
